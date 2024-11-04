@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import '../../../../config/constants.dart';
+import '../../../../routes/routes.dart';
 
 class SplashController extends GetxController {
   @override
@@ -9,7 +10,7 @@ class SplashController extends GetxController {
         const Duration(
           seconds: Constants.splashDuration,
         ), () {
-      //Get.offNamed(Routes.nextPage);
+      Get.offNamed(Routes.mainView);
     });
   }
 }

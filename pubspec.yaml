@@ -44,6 +44,7 @@ dependencies:
   path: ^1.9.0
   path_provider: ^2.1.4
   flutter_svg: ^2.0.10+1
+  google_nav_bar: ^5.0.7
 
 dev_dependencies:
   flutter_test:

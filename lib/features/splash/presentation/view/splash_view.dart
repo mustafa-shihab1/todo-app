@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:todo_app/core/resources/manager_fonts.dart';
+import 'package:todo_app/core/resources/manager_sizes.dart';
 import 'package:todo_app/core/resources/manager_strings.dart';
 
 import '../../../../core/resources/manager_assets.dart';
 import '../../../../core/resources/manager_colors.dart';
-import '../../../../core/resources/manager_fonts.dart';
+import '../../../../core/resources/manager_styles.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({Key? key}) : super(key: key);
@@ -12,23 +14,29 @@ class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(gradient: ManagerColors.splashGradientColor),
+      decoration: BoxDecoration(gradient: ManagerColors.primaryGradientColor),
       child: Scaffold(
         backgroundColor: ManagerColors.transparent,
         body: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: ManagerPaddingAll.p20,
           child: Center(
               child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                  width: 300,
-                  child: SvgPicture.asset(
+                  width: ManagerWidth.w250,
+                  child: Image.asset(
                     ManagerAssets.splashImg,
                   )),
-              const Text(
+              SizedBox(
+                height: ManagerHeight.h40,
+              ),
+              Text(
                 ManagerStrings.appName,
-                style: TextStyle(color: ManagerColors.greyLight, fontSize: 24),
+                style: getRegularTextStyle(
+                  fontSize: ManagerFontSize.s20,
+                  color: ManagerColors.white,
+                ),
               )
             ],
           )),
