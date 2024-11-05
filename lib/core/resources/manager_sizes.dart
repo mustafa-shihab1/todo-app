@@ -71,6 +71,8 @@ class ManagerWidth {
   static double w68 = SizeUtil.setWidth(68.0);
   static double w76 = SizeUtil.setWidth(76.0);
   static double w80 = SizeUtil.setWidth(80.0);
+  static double w82 = SizeUtil.setWidth(82.0);
+  static double w84 = SizeUtil.setWidth(84.0);
   static double w90 = SizeUtil.setWidth(90.0);
   static double w100 = SizeUtil.setWidth(100);
   static double w116 = SizeUtil.setWidth(116);
@@ -109,18 +111,33 @@ class ManagerRadius {
   static double r100 = SizeUtil.setRadius(100.0);
 }
 
-class ManagerPaddingAll {
-  static EdgeInsets p8 = SizeUtil.setAllPadding(8);
-  static EdgeInsets p10 = SizeUtil.setAllPadding(10);
-  static EdgeInsets p12 = SizeUtil.setAllPadding(12);
-  static EdgeInsets p14 = SizeUtil.setAllPadding(14);
-  static EdgeInsets p16 = SizeUtil.setAllPadding(16);
-  static EdgeInsets p18 = SizeUtil.setAllPadding(18);
-  static EdgeInsets p20 = SizeUtil.setAllPadding(20);
+class ManagerOnlySetEdgeInsets {
+  static EdgeInsets pb8 = SizeUtil.setEdgeInsets(bottom: 8);
+  static EdgeInsets mb30 = SizeUtil.setEdgeInsets(bottom: 30);
+  static EdgeInsets pt8 = SizeUtil.setEdgeInsets(top: 8);
+  static EdgeInsets pl8 = SizeUtil.setEdgeInsets(left: 8);
+  static EdgeInsets pr8 = SizeUtil.setEdgeInsets(right: 8);
 }
 
-class ManagerPaddingSymmetric {
-  static EdgeInsets v14h20 = SizeUtil.setSymmetricPadding(14, 20);
+class ManagerAllEdgeInsets {
+  static EdgeInsets p8 = SizeUtil.setAllEdgeInsets(8);
+  static EdgeInsets p10 = SizeUtil.setAllEdgeInsets(10);
+  static EdgeInsets p12 = SizeUtil.setAllEdgeInsets(12);
+  static EdgeInsets p14 = SizeUtil.setAllEdgeInsets(14);
+  static EdgeInsets p16 = SizeUtil.setAllEdgeInsets(16);
+  static EdgeInsets p18 = SizeUtil.setAllEdgeInsets(18);
+  static EdgeInsets p20 = SizeUtil.setAllEdgeInsets(20);
+}
+
+class ManagerSymmetricEdgeInsets {
+  static EdgeInsets v14h20 =
+      SizeUtil.setSymmetricEdgeInsets(vertical: 14, horizontal: 20);
+  static EdgeInsets v10h20 =
+      SizeUtil.setSymmetricEdgeInsets(vertical: 10, horizontal: 20);
+  static EdgeInsets v10h10 =
+      SizeUtil.setSymmetricEdgeInsets(vertical: 10, horizontal: 10);
+  static EdgeInsets v0h12 =
+      SizeUtil.setSymmetricEdgeInsets(vertical: 0, horizontal: 12);
 }
 
 class ManagerIconSize {
