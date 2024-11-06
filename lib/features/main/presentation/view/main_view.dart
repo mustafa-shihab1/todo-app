@@ -4,6 +4,7 @@ import '../../../../core/resources/manager_sizes.dart';
 import '../../../../core/resources/manager_colors.dart';
 import '../../../home/presentation/view/widgets/gnav_bar.dart';
 import '../controller/main_controller.dart';
+import 'custom_appbar.dart';
 
 class MainView extends StatelessWidget {
   const MainView({super.key});
@@ -13,7 +14,9 @@ class MainView extends StatelessWidget {
     return GetBuilder<MainController>(builder: (controller) {
       return Scaffold(
         backgroundColor: ManagerColors.backgroundColor,
-        extendBody: true,
+        appBar: controller.currentIndex != 0
+            ? customMainAppBar(title: controller.title[controller.currentIndex])
+            : customHomeAppBar(),
         body: controller.screens[controller.currentIndex],
         bottomNavigationBar: Container(
           decoration: const BoxDecoration(
