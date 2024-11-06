@@ -15,51 +15,79 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(builder: (controller) {
-      return Scaffold(
-        appBar: AppBar(
-          backgroundColor: ManagerColors.transparent,
-          leading: IconButton(
-              onPressed: () {}, icon: const Icon(Icons.nightlight_outlined)),
-          actions: [
-            Container(
-                margin: ManagerSymmetricEdgeInsets.v0h12,
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  clipBehavior: Clip.antiAlias,
-                  child: CircleAvatar(
-                    child: Image.asset(ManagerAssets.defaultUserImg),
-                  ),
-                )),
-          ],
-        ),
-        body: Stack(
+      return Padding(
+        padding: ManagerSymmetricEdgeInsets.v2h14,
+        child: Stack(
+          alignment: Alignment.bottomRight,
           children: [
-            Padding(
-              padding: ManagerAllEdgeInsets.p16,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(controller.getFullDate(),
-                      style: getRegularTextStyle(
-                          fontSize: ManagerFontSize.s18,
-                          color: ManagerColors.lightBlackColor)),
-                  SizedBox(
-                    height: ManagerHeight.h30,
-                  ),
-                  const CalenderListView(),
-                  SizedBox(
-                    height: ManagerHeight.h50,
-                  ),
-                  const CustomStartHomeItem(),
-                  const Spacer(),
-                ],
-              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(controller.getFullDate(),
+                    style: getRegularTextStyle(
+                        fontSize: ManagerFontSize.s18,
+                        color: ManagerColors.lightBlackColor)),
+                SizedBox(
+                  height: ManagerHeight.h30,
+                ),
+                const CalenderListView(),
+                SizedBox(
+                  height: ManagerHeight.h30,
+                ),
+                Expanded(
+                  child: ListView.separated(
+                      scrollDirection: Axis.vertical,
+                      itemBuilder: (context, index) => Container(
+                          width: double.infinity,
+                          height: 120,
+                          decoration: BoxDecoration(
+                              color: ManagerColors.greyLight,
+                              borderRadius: BorderRadius.circular(16)),
+                          child: Card(
+                            color: ManagerColors.white,
+                            elevation: 0,
+                            child: Padding(
+                              padding: ManagerAllEdgeInsets.p10,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Title',
+                                    style: getMediumTextStyle(
+                                        fontSize: ManagerFontSize.s12,
+                                        color: ManagerColors.black),
+                                  ),
+                                  Text(
+                                    'write the description here! write the description here!write the description here!write the description here!write the description here!write the description here!write the description here!',
+                                    style: getRegularTextStyle(
+                                        fontSize: ManagerFontSize.s10,
+                                        color: ManagerColors.black),
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                  const Divider(
+                                    height: 14.0,
+                                    endIndent: 300,
+                                  ),
+                                  Text(
+                                    'Daily : 2:30pm',
+                                    style: getMediumTextStyle(
+                                        fontSize: ManagerFontSize.s10,
+                                        color: ManagerColors.black),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )),
+                      separatorBuilder: (context, index) =>
+                          SizedBox(height: ManagerHeight.h20),
+                      itemCount: 10),
+                ),
+                //const CustomStartHomeItem(),
+              ],
             ),
             Positioned(
-              right: ManagerWidth.w2,
-              bottom: ManagerHeight.h70,
+              right: 0,
               child: MenuItemButton(
                 clipBehavior: Clip.antiAlias,
                 child: Container(
