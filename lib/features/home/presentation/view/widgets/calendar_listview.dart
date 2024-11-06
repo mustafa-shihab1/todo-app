@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import '../../../../../core/resources/manager_fonts.dart';
 import '../../../../../core/resources/manager_sizes.dart';
 import '../../../../../core/resources/manager_styles.dart';
@@ -14,7 +15,8 @@ class CalenderListView extends StatelessWidget {
     return GetBuilder<HomeController>(builder: (controller) {
       return SizedBox(
         height: ManagerHeight.h100,
-        child: ListView.separated(
+        child: ScrollablePositionedList.separated(
+          itemScrollController: controller.itemController,
           scrollDirection: Axis.horizontal,
           itemCount: controller.currentMonthDays.length,
           itemBuilder: (context, index) {

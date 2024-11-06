@@ -1,10 +1,14 @@
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class HomeController extends GetxController {
   DateTime currentDate = DateTime.now();
   List<DateTime> currentMonthDays = [];
   int selectedDayIndex = DateTime.now().day - 1;
+
+  final itemController = ItemScrollController();
 
   String getFullDate() => DateFormat('MMMM dd, y').format(currentDate);
 
@@ -36,9 +40,13 @@ class HomeController extends GetxController {
     update();
   }
 
+  void scrollToCurrentDay(int index) => itemController.jumpTo(index: index);
+
   @override
   void onInit() {
     getCurrentMonthDays();
     super.onInit();
+    WidgetsBinding.instance
+        .addPostFrameCallback((_) => scrollToCurrentDay(selectedDayIndex));
   }
 }
