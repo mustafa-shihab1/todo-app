@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../util/size_util.dart';
 
 class ManagerFontFamily {
-  static const String fontFamily = 'NunitoSans';
+  static const String fontFamily = 'Inter';
 }
 
 class ManagerFontWeight {

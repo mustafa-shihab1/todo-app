@@ -22,8 +22,8 @@ class SizeUtil {
     return radius.r;
   }
 
-// Padding
-  static EdgeInsets setPadding({
+// Padding/Margin
+  static EdgeInsets setEdgeInsets({
     double left = 0,
     double top = 0,
     double right = 0,
@@ -37,13 +37,14 @@ class SizeUtil {
     );
   }
 
-  // Symmetric sides Padding
-  static EdgeInsets setSymmetricPadding(double height, double width) {
-    return EdgeInsets.symmetric(vertical: height.h, horizontal: width.w);
+  // Symmetric sides Padding/Margin
+  static EdgeInsets setSymmetricEdgeInsets(
+      {double vertical = 0, double horizontal = 0}) {
+    return EdgeInsets.symmetric(vertical: vertical.h, horizontal: horizontal.w);
   }
 
-  // All sides Padding
-  static EdgeInsets setAllPadding(double value) {
+  // All sides Padding/Margin
+  static EdgeInsets setAllEdgeInsets(double value) {
     return EdgeInsets.all(value.w);
   }
 }

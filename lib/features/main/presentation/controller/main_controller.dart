@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../home/presentation/view/home_view.dart';
 import '../view/screens/completed_view.dart';
-import '../view/screens/home_view.dart';
 import '../view/screens/search_view.dart';
 import '../view/screens/settings_view.dart';
 

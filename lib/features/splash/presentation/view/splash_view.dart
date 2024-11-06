@@ -18,7 +18,7 @@ class SplashView extends StatelessWidget {
       child: Scaffold(
         backgroundColor: ManagerColors.transparent,
         body: Padding(
-          padding: ManagerPaddingAll.p20,
+          padding: ManagerAllEdgeInsets.p20,
           child: Center(
               child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
