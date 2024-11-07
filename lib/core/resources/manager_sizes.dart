@@ -19,6 +19,7 @@ class ManagerHeight {
   static double h44 = SizeUtil.setHeight(44);
   static double h48 = SizeUtil.setHeight(48);
   static double h50 = SizeUtil.setHeight(52);
+  static double h56 = SizeUtil.setHeight(56);
   static double h60 = SizeUtil.setHeight(60);
   static double h70 = SizeUtil.setHeight(70);
   static double h80 = SizeUtil.setHeight(80);
@@ -138,6 +139,8 @@ class ManagerSymmetricEdgeInsets {
       SizeUtil.setSymmetricEdgeInsets(vertical: 10, horizontal: 10);
   static EdgeInsets v0h12 =
       SizeUtil.setSymmetricEdgeInsets(vertical: 0, horizontal: 12);
+  static EdgeInsets v2h14 =
+      SizeUtil.setSymmetricEdgeInsets(vertical: 2, horizontal: 14);
 }
 
 class ManagerIconSize {

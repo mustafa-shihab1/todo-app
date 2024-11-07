@@ -13,7 +13,8 @@ class CalenderListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(builder: (controller) {
-      return SizedBox(
+      return Container(
+        color: ManagerColors.backgroundColor,
         height: ManagerHeight.h100,
         child: ScrollablePositionedList.separated(
           itemScrollController: controller.itemController,
