@@ -11,7 +11,7 @@ AppBar customMainAppBar({
   String title = "",
 }) =>
     AppBar(
-      backgroundColor: ManagerColors.transparent,
+      backgroundColor: ManagerColors.backgroundColor,
       elevation: Constants.appBarElevation,
       title: Text(
         title,
@@ -21,23 +21,26 @@ AppBar customMainAppBar({
       centerTitle: true,
     );
 
-AppBar customHomeAppBar() {
-  return AppBar(
-    backgroundColor: ManagerColors.transparent,
-    leading: IconButton(
-        onPressed: () {}, icon: const Icon(Icons.nightlight_outlined)),
-    actions: [
-      Container(
-          margin: ManagerSymmetricEdgeInsets.v0h12,
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            clipBehavior: Clip.antiAlias,
-            child: CircleAvatar(
-              child: Image.asset(ManagerAssets.defaultUserImg),
-            ),
-          )),
-    ],
-  );
+PreferredSize customHomeAppBar() {
+  return PreferredSize(
+      preferredSize: const Size.fromHeight(56.0),
+      child: AppBar(
+        backgroundColor: ManagerColors.backgroundColor,
+        elevation: Constants.appBarElevation,
+        leading: IconButton(
+            onPressed: () {}, icon: const Icon(Icons.nightlight_outlined)),
+        actions: [
+          Container(
+              margin: ManagerSymmetricEdgeInsets.v0h12,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: CircleAvatar(
+                  child: Image.asset(ManagerAssets.defaultUserImg),
+                ),
+              )),
+        ],
+      ));
 }
