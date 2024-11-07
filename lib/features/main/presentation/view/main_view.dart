@@ -17,7 +17,27 @@ class MainView extends StatelessWidget {
         appBar: controller.currentIndex != 0
             ? customMainAppBar(title: controller.title[controller.currentIndex])
             : customHomeAppBar(),
-        body: controller.screens[controller.currentIndex],
+        body: IndexedStack(
+          index: controller.currentIndex,
+          children: controller.screens,
+        ),
+        floatingActionButton: controller.currentIndex != 0
+            ? Container()
+            : GestureDetector(
+                onTap: () {},
+                child: Container(
+                    clipBehavior: Clip.antiAlias,
+                    height: ManagerHeight.h60,
+                    width: ManagerHeight.h60,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      gradient: ManagerColors.primaryGradientColor,
+                    ),
+                    child: const Icon(
+                      Icons.add,
+                      color: ManagerColors.white,
+                    )),
+              ),
         bottomNavigationBar: Container(
           decoration: const BoxDecoration(
               color: ManagerColors.primaryColor,
