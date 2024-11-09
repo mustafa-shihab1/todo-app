@@ -24,7 +24,7 @@ class SplashView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                  width: ManagerWidth.w250,
+                  width: ManagerWidth.w200,
                   child: Image.asset(
                     ManagerAssets.splashImg,
                   )),

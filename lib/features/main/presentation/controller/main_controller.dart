@@ -4,7 +4,7 @@ import '../../../../core/resources/manager_strings.dart';
 import '../../../home/presentation/view/home_view.dart';
 import '../view/screens/completed_view.dart';
 import '../../../search/presentation/view/search_view.dart';
-import '../view/screens/settings_view.dart';
+import '../../../settings/presentation/view/settings_view.dart';
 
 class MainController extends GetxController {
   int currentIndex = 0;
