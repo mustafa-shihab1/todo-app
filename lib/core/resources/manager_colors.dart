@@ -13,8 +13,10 @@ class ManagerColors {
   static const Color transparent = Colors.transparent;
   static const Color primaryColor = Color(0xFF3F51B5);
   static const Color primaryColorLight = Color(0xFF757DE8);
-  static const Color softGreyColor = Color(0xFFE0E0E0);
+  static const Color softGreyColor = Color.fromARGB(255, 245, 244, 244);
   static const Color lightYellowColor = Color(0xFFFDD835);
+  static const Color dividerColor = Color(0xFFEFEEF0);
+  static const Color greyTextColor = Color(0xFF827D89);
   static const Color textColorLight = Color(0xff525167);
   static Color tabBackgroundColor = Colors.grey.shade300.withOpacity(0.2);
 

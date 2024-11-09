@@ -8,4 +8,10 @@ class ManagerStrings {
   static const String search = 'Search';
   static const String completed = 'Completed';
   static const String settings = 'Settings';
+  static const String appSettings = 'App Settings';
+  static const String changeImage = 'Change Image';
+  static const String editProfile = 'Edit Profile';
+  static const String language = 'Language';
+  static const String notification = 'Notification';
+  static const String aboutApp = 'About App';
 }
