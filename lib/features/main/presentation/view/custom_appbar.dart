@@ -15,7 +15,7 @@ AppBar customMainAppBar({
       elevation: Constants.appBarElevation,
       title: Text(
         title,
-        style: getRegularTextStyle(
+        style: getMediumTextStyle(
             fontSize: ManagerFontSize.s16, color: ManagerColors.black),
       ),
       centerTitle: true,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/resources/manager_assets.dart';
@@ -8,6 +7,7 @@ import '../../../../core/resources/manager_colors.dart';
 import '../../../../core/resources/manager_fonts.dart';
 import '../../../../core/resources/manager_sizes.dart';
 import '../../../../core/resources/manager_strings.dart';
+import '../../../../core/widgets/main_button.dart';
 import '../../../../routes/routes.dart';
 import 'widgets/app_settings_item.dart';
 
@@ -72,37 +72,13 @@ class SettingsView extends StatelessWidget {
                 SizedBox(
                   height: ManagerHeight.h30,
                 ),
-                Container(
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                      color: ManagerColors.white,
-                      borderRadius: BorderRadius.circular(25),
-                      border: Border.all(color: ManagerColors.primaryColor)),
-                  height: ManagerHeight.h50,
-                  child: MaterialButton(
-                    onPressed: () {
-                      Get.toNamed(Routes.editProfileView);
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SvgPicture.asset(
-                          ManagerAssets.editIcon,
-                          width: ManagerWidth.w18,
-                          color: ManagerColors.primaryColor,
-                        ),
-                        SizedBox(
-                          width: ManagerWidth.w8,
-                        ),
-                        Text(
-                          ManagerStrings.editProfile,
-                          style: getMediumTextStyle(
-                              fontSize: ManagerFontSize.s16,
-                              color: ManagerColors.primaryColor),
-                        ),
-                      ],
-                    ),
-                  ),
+                MainButton(
+                  onPressed: () => Get.toNamed(Routes.editProfileView),
+                  btnTitle: ManagerStrings.editProfile,
+                  btnSvgIcon: ManagerAssets.editIcon,
+                  borderColor: ManagerColors.primaryColor,
+                  iconColor: ManagerColors.primaryColor,
+                  titleColor: ManagerColors.primaryColor,
                 ),
                 SizedBox(
                   height: ManagerHeight.h24,
