@@ -5,9 +5,6 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 class HomeController extends GetxController {
   DateTime currentDate = DateTime.now();
   DateTime selectedDate = DateTime.now();
-  List<DateTime> currentMonthDays = [];
-  int selectedDayIndex = DateTime.now().day - 1;
-
   final itemController = ItemScrollController();
 
   String getFullDate() => DateFormat('MMMM dd, y').format(currentDate);

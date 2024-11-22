@@ -30,7 +30,8 @@ class EditProfileScreen extends StatelessWidget {
               child: Image.asset(ManagerAssets.defaultUserImg)),
           SizedBox(height: ManagerHeight.h18),
           Padding(
-            padding: ManagerSymmetricEdgeInsets.v0h100,
+            padding: ManagerSetEdgeInsets.setSymmetric(
+                horizontal: ManagerWidth.w100),
             child: MainButton(
               onPressed: () {},
               btnTitle: ManagerStrings.changeImage,
@@ -41,7 +42,7 @@ class EditProfileScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: ManagerHeight.h50),
-          Text('FullNAme')
+          const Text('FullNAme')
         ],
       ),
     );

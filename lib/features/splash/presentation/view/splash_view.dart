@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:todo_app/core/resources/manager_fonts.dart';
 import 'package:todo_app/core/resources/manager_sizes.dart';
 import 'package:todo_app/core/resources/manager_strings.dart';
@@ -18,7 +17,7 @@ class SplashView extends StatelessWidget {
       child: Scaffold(
         backgroundColor: ManagerColors.transparent,
         body: Padding(
-          padding: ManagerAllEdgeInsets.p20,
+          padding: ManagerSetEdgeInsets.setAll(20),
           child: Center(
               child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

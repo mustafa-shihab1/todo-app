@@ -26,7 +26,8 @@ class GNavBar extends StatelessWidget {
         color: ManagerColors.unselectedItemColor,
         activeColor: ManagerColors.white,
         tabBackgroundColor: ManagerColors.tabBackgroundColor,
-        padding: ManagerSymmetricEdgeInsets.v14h20,
+        padding: ManagerSetEdgeInsets.setSymmetric(
+            vertical: ManagerHeight.h14, horizontal: ManagerWidth.w20),
         tabs: [
           gNavButton(icon: Icons.home_outlined, text: ManagerStrings.home),
           gNavButton(icon: Icons.search, text: ManagerStrings.search),

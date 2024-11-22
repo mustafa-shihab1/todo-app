@@ -18,7 +18,7 @@ class AppSettingsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: ManagerAllEdgeInsets.p12,
+      padding: ManagerSetEdgeInsets.setAll(12),
       child: GestureDetector(
         onTap: onTap,
         child: Row(

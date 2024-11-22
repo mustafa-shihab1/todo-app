@@ -15,7 +15,8 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(builder: (controller) {
       return Padding(
-        padding: ManagerSymmetricEdgeInsets.v2h14,
+        padding: ManagerSetEdgeInsets.setSymmetric(
+            vertical: ManagerHeight.h2, horizontal: ManagerWidth.w14),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

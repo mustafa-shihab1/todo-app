@@ -46,7 +46,7 @@ class MainView extends StatelessWidget {
                 topRight: Radius.circular(16),
               )),
           child: Padding(
-            padding: ManagerAllEdgeInsets.p12,
+            padding: ManagerSetEdgeInsets.setAll(12),
             child: GNavBar(
               controller: controller,
             ),

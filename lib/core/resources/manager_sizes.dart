@@ -113,35 +113,16 @@ class ManagerRadius {
   static double r100 = SizeUtil.setRadius(100.0);
 }
 
-class ManagerOnlySetEdgeInsets {
-  static EdgeInsets pb8 = SizeUtil.setEdgeInsets(bottom: 8);
-  static EdgeInsets mb30 = SizeUtil.setEdgeInsets(bottom: 30);
-  static EdgeInsets pt8 = SizeUtil.setEdgeInsets(top: 8);
-  static EdgeInsets pl8 = SizeUtil.setEdgeInsets(left: 8);
-  static EdgeInsets pr8 = SizeUtil.setEdgeInsets(right: 8);
-}
+class ManagerSetEdgeInsets {
+  static EdgeInsets setOnly({top = 0, bottom = 0, left = 0, right = 0}) =>
+      SizeUtil.setEdgeInsets(
+          top: top, bottom: bottom, left: left, right: right);
 
-class ManagerAllEdgeInsets {
-  static EdgeInsets p8 = SizeUtil.setAllEdgeInsets(8);
-  static EdgeInsets p10 = SizeUtil.setAllEdgeInsets(10);
-  static EdgeInsets p12 = SizeUtil.setAllEdgeInsets(12);
-  static EdgeInsets p14 = SizeUtil.setAllEdgeInsets(14);
-  static EdgeInsets p16 = SizeUtil.setAllEdgeInsets(16);
-  static EdgeInsets p18 = SizeUtil.setAllEdgeInsets(18);
-  static EdgeInsets p20 = SizeUtil.setAllEdgeInsets(20);
-}
+  static EdgeInsets setAll(all) => SizeUtil.setAllEdgeInsets(all);
 
-class ManagerSymmetricEdgeInsets {
-  static EdgeInsets v14h20 =
-      SizeUtil.setSymmetricEdgeInsets(vertical: 14, horizontal: 20);
-  static EdgeInsets v10h20 =
-      SizeUtil.setSymmetricEdgeInsets(vertical: 10, horizontal: 20);
-  static EdgeInsets v10h10 =
-      SizeUtil.setSymmetricEdgeInsets(vertical: 10, horizontal: 10);
-  static EdgeInsets v0h12 =
-      SizeUtil.setSymmetricEdgeInsets(vertical: 0, horizontal: 12);
-  static EdgeInsets v2h14 =
-      SizeUtil.setSymmetricEdgeInsets(vertical: 2, horizontal: 14);
+  static EdgeInsets setSymmetric({vertical = 0, horizontal = 0}) =>
+      SizeUtil.setSymmetricEdgeInsets(
+          vertical: vertical, horizontal: horizontal);
 }
 
 class ManagerIconSize {
@@ -169,7 +150,7 @@ class ManagerIconSize {
 
 class ManagerOpacity {
   static double op0_2 = 0.2;
-  static double Op_0_3 = 0.3;
+  static double op0_3 = 0.3;
   static double op0_4 = 0.4;
   static double op0_5 = 0.5;
   static double op0_6 = 0.6;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/core/resources/manager_fonts.dart';
-import 'package:todo_app/core/resources/manager_styles.dart';
+import '../../../../core/resources/manager_fonts.dart';
+import '../../../../core/resources/manager_styles.dart';
 
 import '../../../../config/constants.dart';
 import '../../../../core/resources/manager_assets.dart';
@@ -31,7 +31,8 @@ PreferredSize customHomeAppBar() {
             onPressed: () {}, icon: const Icon(Icons.nightlight_outlined)),
         actions: [
           Container(
-              margin: ManagerSymmetricEdgeInsets.v0h12,
+              margin: ManagerSetEdgeInsets.setSymmetric(
+                  horizontal: ManagerWidth.w12),
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),

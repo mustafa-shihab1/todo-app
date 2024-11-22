@@ -14,7 +14,8 @@ class CustomSearchBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: ManagerSymmetricEdgeInsets.v2h14,
+      padding: ManagerSetEdgeInsets.setSymmetric(
+          vertical: ManagerHeight.h2, horizontal: ManagerWidth.w14),
       child: Container(
         decoration: BoxDecoration(
             color: ManagerColors.softGreyColor,
