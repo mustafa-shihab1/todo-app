@@ -3,12 +3,10 @@ import 'package:get/get.dart';
 import 'package:todo_app/features/home/presentation/view/widgets/task_details.dart';
 import '../../../../../core/resources/manager_fonts.dart';
 import '../../../../../core/resources/manager_styles.dart';
-import 'widgets/calendar_listview.dart';
 import '../../../../features/home/presentation/controller/home_controller.dart';
 import '../../../../../core/resources/manager_colors.dart';
 import '../../../../../core/resources/manager_sizes.dart';
-import '../../../../../core/resources/manager_assets.dart';
-import 'widgets/custom_starthome_item.dart';
+import 'widgets/calendar_item_builder.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -26,9 +24,11 @@ class HomeView extends StatelessWidget {
                     fontSize: ManagerFontSize.s18,
                     color: ManagerColors.lightBlackColor)),
             SizedBox(
-              height: ManagerHeight.h30,
+              height: ManagerHeight.h10,
             ),
-            const CalenderListView(),
+            CalendarItemBuilder(
+              controller: controller,
+            ),
             SizedBox(
               height: ManagerHeight.h30,
             ),
