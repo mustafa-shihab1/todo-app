@@ -12,7 +12,7 @@ class SearchView extends StatelessWidget {
       children: [
         const Divider(
           color: ManagerColors.dividerColor,
-          thickness: 2,
+          thickness: 1,
         ),
         SizedBox(
           height: ManagerHeight.h20,

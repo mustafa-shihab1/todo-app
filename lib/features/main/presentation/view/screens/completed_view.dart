@@ -11,7 +11,7 @@ class CompletedView extends StatelessWidget {
       children: [
         Divider(
           color: ManagerColors.dividerColor,
-          thickness: 2,
+          thickness: 1,
         ),
       ],
     );
