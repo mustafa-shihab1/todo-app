@@ -10,7 +10,7 @@ class SplashController extends GetxController {
         const Duration(
           seconds: Constants.splashDuration,
         ), () {
-      Get.offNamed(Routes.mainView);
+      Get.offAllNamed(Routes.mainView);
     });
   }
 }

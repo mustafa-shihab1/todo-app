@@ -13,12 +13,15 @@ class ManagerHeight {
   static double h16 = SizeUtil.setHeight(16);
   static double h18 = SizeUtil.setHeight(18);
   static double h20 = SizeUtil.setHeight(20);
+  static double h24 = SizeUtil.setHeight(24);
   static double h28 = SizeUtil.setHeight(28);
   static double h30 = SizeUtil.setHeight(30);
+  static double h32 = SizeUtil.setHeight(32);
   static double h40 = SizeUtil.setHeight(40);
   static double h44 = SizeUtil.setHeight(44);
   static double h48 = SizeUtil.setHeight(48);
   static double h50 = SizeUtil.setHeight(52);
+  static double h56 = SizeUtil.setHeight(56);
   static double h60 = SizeUtil.setHeight(60);
   static double h70 = SizeUtil.setHeight(70);
   static double h80 = SizeUtil.setHeight(80);
@@ -71,6 +74,8 @@ class ManagerWidth {
   static double w68 = SizeUtil.setWidth(68.0);
   static double w76 = SizeUtil.setWidth(76.0);
   static double w80 = SizeUtil.setWidth(80.0);
+  static double w82 = SizeUtil.setWidth(82.0);
+  static double w84 = SizeUtil.setWidth(84.0);
   static double w90 = SizeUtil.setWidth(90.0);
   static double w100 = SizeUtil.setWidth(100);
   static double w116 = SizeUtil.setWidth(116);
@@ -109,18 +114,21 @@ class ManagerRadius {
   static double r100 = SizeUtil.setRadius(100.0);
 }
 
-class ManagerPaddingAll {
-  static EdgeInsets p8 = SizeUtil.setAllPadding(8);
-  static EdgeInsets p10 = SizeUtil.setAllPadding(10);
-  static EdgeInsets p12 = SizeUtil.setAllPadding(12);
-  static EdgeInsets p14 = SizeUtil.setAllPadding(14);
-  static EdgeInsets p16 = SizeUtil.setAllPadding(16);
-  static EdgeInsets p18 = SizeUtil.setAllPadding(18);
-  static EdgeInsets p20 = SizeUtil.setAllPadding(20);
-}
+class ManagerSetEdgeInsets {
+  static EdgeInsets setOnly(
+          {double top = 0,
+          double bottom = 0,
+          double left = 0,
+          double right = 0}) =>
+      SizeUtil.setEdgeInsets(
+          top: top, bottom: bottom, left: left, right: right);
 
-class ManagerPaddingSymmetric {
-  static EdgeInsets v14h20 = SizeUtil.setSymmetricPadding(14, 20);
+  static EdgeInsets setAll(double all) => SizeUtil.setAllEdgeInsets(all);
+
+  static EdgeInsets setSymmetric(
+          {double vertical = 0, double horizontal = 0}) =>
+      SizeUtil.setSymmetricEdgeInsets(
+          vertical: vertical, horizontal: horizontal);
 }
 
 class ManagerIconSize {
@@ -148,7 +156,7 @@ class ManagerIconSize {
 
 class ManagerOpacity {
   static double op0_2 = 0.2;
-  static double Op_0_3 = 0.3;
+  static double op0_3 = 0.3;
   static double op0_4 = 0.4;
   static double op0_5 = 0.5;
   static double op0_6 = 0.6;
