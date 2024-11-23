@@ -114,13 +114,18 @@ class ManagerRadius {
 }
 
 class ManagerSetEdgeInsets {
-  static EdgeInsets setOnly({top = 0, bottom = 0, left = 0, right = 0}) =>
+  static EdgeInsets setOnly(
+          {double top = 0,
+          double bottom = 0,
+          double left = 0,
+          double right = 0}) =>
       SizeUtil.setEdgeInsets(
           top: top, bottom: bottom, left: left, right: right);
 
-  static EdgeInsets setAll(all) => SizeUtil.setAllEdgeInsets(all);
+  static EdgeInsets setAll(double all) => SizeUtil.setAllEdgeInsets(all);
 
-  static EdgeInsets setSymmetric({vertical = 0, horizontal = 0}) =>
+  static EdgeInsets setSymmetric(
+          {double vertical = 0, double horizontal = 0}) =>
       SizeUtil.setSymmetricEdgeInsets(
           vertical: vertical, horizontal: horizontal);
 }
