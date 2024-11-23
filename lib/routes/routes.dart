@@ -22,7 +22,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const MainView());
       case Routes.editProfileView:
         // initMain();
-        return MaterialPageRoute(builder: (_) => const EditProfileScreen());
+        return MaterialPageRoute(builder: (_) => EditProfileScreen());
       default:
         return unDefinedRoute();
     }

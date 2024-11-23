@@ -4,6 +4,7 @@ class ManagerColors {
   static const Color white = Colors.white;
   static const Color black = Colors.black;
   static const Color grey = Colors.grey;
+  static const Color red = Colors.red;
   static const Color lightBlackColor = Colors.black38;
   static const Color uselectedTextColor = Colors.white;
   static const Color unselectedDayColor = Color.fromARGB(40, 0, 0, 0);

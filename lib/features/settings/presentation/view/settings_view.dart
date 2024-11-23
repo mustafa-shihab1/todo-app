@@ -20,7 +20,7 @@ class SettingsView extends StatelessWidget {
       children: [
         const Divider(
           color: ManagerColors.dividerColor,
-          thickness: 2,
+          thickness: 1,
         ),
         SizedBox(height: ManagerHeight.h30),
         Container(
@@ -80,13 +80,14 @@ class SettingsView extends StatelessWidget {
                   borderColor: ManagerColors.primaryColor,
                   iconColor: ManagerColors.primaryColor,
                   titleColor: ManagerColors.primaryColor,
+                  borderRadius: 25,
                 ),
                 SizedBox(
                   height: ManagerHeight.h24,
                 ),
                 const Divider(
                   color: ManagerColors.dividerColor,
-                  thickness: 2,
+                  thickness: 1,
                 ),
                 SizedBox(
                   height: ManagerHeight.h24,

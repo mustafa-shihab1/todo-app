@@ -9,17 +9,21 @@ import '../resources/manager_styles.dart';
 class MainButton extends StatelessWidget {
   void Function()? onPressed;
   String btnTitle;
-  String btnSvgIcon;
+  String? btnSvgIcon;
   Color borderColor;
-  Color iconColor;
+  double borderRadius;
+  Color? btnColor = ManagerColors.white;
+  Color? iconColor;
   Color titleColor;
   MainButton({
     super.key,
     required this.onPressed,
     required this.btnTitle,
-    required this.btnSvgIcon,
+    this.btnColor,
+    this.btnSvgIcon,
     required this.borderColor,
-    required this.iconColor,
+    required this.borderRadius,
+    this.iconColor,
     required this.titleColor,
   });
 
@@ -28,8 +32,8 @@ class MainButton extends StatelessWidget {
     return Container(
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-          color: ManagerColors.white,
-          borderRadius: BorderRadius.circular(25),
+          color: btnColor,
+          borderRadius: BorderRadius.circular(borderRadius),
           border: Border.all(color: borderColor)),
       height: ManagerHeight.h50,
       child: MaterialButton(
@@ -37,11 +41,13 @@ class MainButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(
-              btnSvgIcon,
-              width: ManagerWidth.w18,
-              color: iconColor,
-            ),
+            btnSvgIcon != null
+                ? SvgPicture.asset(
+                    btnSvgIcon!,
+                    width: ManagerWidth.w18,
+                    color: iconColor,
+                  )
+                : Container(),
             SizedBox(
               width: ManagerWidth.w8,
             ),
