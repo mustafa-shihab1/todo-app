@@ -1,6 +1,5 @@
 import 'package:easy_date_timeline/easy_date_timeline.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:todo_app/features/home/presentation/controller/home_controller.dart';
 
 import '../../../../../core/resources/manager_colors.dart';

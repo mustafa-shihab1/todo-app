@@ -9,22 +9,22 @@ import '../resources/manager_styles.dart';
 class MainButton extends StatelessWidget {
   void Function()? onPressed;
   String btnTitle;
-  String? btnSvgIcon;
-  Color borderColor;
-  double borderRadius;
-  Color? btnColor = ManagerColors.white;
-  Color? iconColor;
   Color titleColor;
+  double borderRadius;
+  Color borderColor;
+  Color? btnColor = ManagerColors.white;
+  String? btnSvgIcon;
+  Color? iconColor;
   MainButton({
     super.key,
     required this.onPressed,
     required this.btnTitle,
+    required this.titleColor,
+    required this.borderRadius,
+    required this.borderColor,
     this.btnColor,
     this.btnSvgIcon,
-    required this.borderColor,
-    required this.borderRadius,
     this.iconColor,
-    required this.titleColor,
   });
 
   @override

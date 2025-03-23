@@ -5,25 +5,25 @@ import '../resources/manager_sizes.dart';
 import '../resources/manager_styles.dart';
 
 Widget customTextField({
-  required String hintText,
-  bool obSecure = false,
-  required TextEditingController controller,
-  String? Function(String?)? validator,
+  TextEditingController? controller,
+  TextInputType? textInputType,
   Widget? suffixIcon,
   Widget? prefixIcon,
+  String? Function(String?)? validator,
   void Function()? onTap,
-  onChange,
-  TextInputType? textInputType,
-  FocusNode? focusNode,
+  void Function(String)? onFieldSubmitted,
+  String hintText = "",
+  bool obSecure = false,
+  double radius = 16,
+  bool readOnly = false,
 }) {
   return TextFormField(
     controller: controller,
     validator: validator,
     obscureText: obSecure,
+    onFieldSubmitted: onFieldSubmitted,
     keyboardType: textInputType,
     onTap: onTap,
-    focusNode: focusNode,
-    onChanged: onChange ?? (val) {},
     textInputAction: TextInputAction.next,
     style: getRegularTextStyle(
       fontSize: ManagerFontSize.s14,
@@ -36,7 +36,7 @@ Widget customTextField({
       ),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(
-          ManagerRadius.r16,
+          radius,
         ),
         borderSide: const BorderSide(
           color: ManagerColors.greyLight,
@@ -44,7 +44,7 @@ Widget customTextField({
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(
-          ManagerRadius.r16,
+          radius,
         ),
         borderSide: const BorderSide(
           color: ManagerColors.greyLight,
@@ -52,7 +52,7 @@ Widget customTextField({
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(
-          ManagerRadius.r16,
+          radius,
         ),
         borderSide: const BorderSide(
           color: ManagerColors.greyLight,
@@ -60,7 +60,7 @@ Widget customTextField({
       ),
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(
-          ManagerRadius.r16,
+          radius,
         ),
         borderSide: const BorderSide(
           color: ManagerColors.red,
@@ -74,5 +74,6 @@ Widget customTextField({
         color: ManagerColors.greyLight,
       ),
     ),
+    readOnly: readOnly,
   );
 }
