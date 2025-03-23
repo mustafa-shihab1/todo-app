@@ -23,7 +23,23 @@ class ManagerStrings {
   static const String invalidEmptyPhoneNumber = 'invalid empty phone number';
   static const String invalidPhoneNumber = 'invalid phone number';
   static const String invalidEmptyFullName = 'invalid empty full name';
+  static const String invalidTextInput = 'invalid text input';
   static const String invalidFullName = 'invalid full name';
   static const String invalidEmptyCode = 'invalid empty code';
   static const String save = 'Save';
+  static const String addTask = 'Add Task';
+  static const String title = 'Title';
+  static const String note = 'Note';
+  static const String date = 'Date';
+  static const String time = 'Time';
+  static const String remind = 'Remind';
+  static const String repeat = 'Repeat';
+  static const String color = 'Color';
+  static const String createTask = 'Create';
+  static const String taskDetails = 'Task Details';
+  static const String updateTask = 'Update';
+  static const String selectDate = 'Select date';
+  static const String addTitle = 'Add title';
+  static const String addNote = 'Add note';
+  static const String selectTime = 'Select time';
 }
