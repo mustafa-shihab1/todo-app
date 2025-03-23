@@ -4,11 +4,15 @@ import '../core/resources/manager_strings.dart';
 import '../features/main/presentation/view/main_view.dart';
 import '../features/settings/presentation/view/screens/edit_profile_screen.dart';
 import '../features/splash/presentation/view/splash_view.dart';
+import '../features/tasks/presentation/view/add_task_view.dart';
+import '../features/tasks/presentation/view/task_details_view.dart';
 
 class Routes {
   static const String splashView = "/splash_view";
   static const String mainView = "/main_view";
   static const String editProfileView = "/edit_profile_screen";
+  static const String addTaskView = "/add_task_view";
+  static const String taskDetailsView = "/task_details_view";
 }
 
 class RouteGenerator {
@@ -21,8 +25,12 @@ class RouteGenerator {
         initMain();
         return MaterialPageRoute(builder: (_) => const MainView());
       case Routes.editProfileView:
-        // initMain();
-        return MaterialPageRoute(builder: (_) => EditProfileScreen());
+        return MaterialPageRoute(builder: (_) => const EditProfileScreen());
+      case Routes.addTaskView:
+        return MaterialPageRoute(builder: (_) => const AddTaskView());
+      case Routes.taskDetailsView:
+        final int taskIndex = settings.arguments as int;
+        return MaterialPageRoute(builder: (_) => TaskDetailsView(taskIndex: taskIndex,));
       default:
         return unDefinedRoute();
     }
