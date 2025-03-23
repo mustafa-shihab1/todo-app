@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:todo_app/features/home/presentation/view/widgets/task_details.dart';
+import 'package:todo_app/features/home/presentation/view/widgets/custom_starthome_item.dart';
+import 'package:todo_app/features/home/presentation/view/widgets/task_card_item.dart';
 import '../../../../../core/resources/manager_fonts.dart';
 import '../../../../../core/resources/manager_styles.dart';
 import '../../../../features/home/presentation/controller/home_controller.dart';
@@ -33,13 +34,19 @@ class HomeView extends StatelessWidget {
             SizedBox(
               height: ManagerHeight.h30,
             ),
-            Expanded(
-              child: ListView.separated(
-                  scrollDirection: Axis.vertical,
-                  itemBuilder: (context, index) => const TaskDetails(),
-                  separatorBuilder: (context, index) =>
-                      SizedBox(height: ManagerHeight.h20),
-                  itemCount: 10),
+            Visibility(
+              replacement: const CustomStartHomeItem(),
+              visible: controller.notes.isNotEmpty,
+              child: Expanded(
+                child: ListView.separated(
+                    scrollDirection: Axis.vertical,
+                    itemBuilder: (context, index) => TaskCardItem(
+                      noteIndex: index,
+                        ),
+                    separatorBuilder: (context, index) =>
+                        SizedBox(height: ManagerHeight.h20),
+                    itemCount: controller.notes.length),
+              ),
             ),
             //const CustomStartHomeItem(),
           ],
