@@ -1,6 +1,13 @@
 import '../resources/manager_strings.dart';
 
 class FieldValidator {
+  String? validateText(String? text) {
+    if (text!.isEmpty) {
+      return ManagerStrings.invalidTextInput;
+    }
+    return null;
+  }
+
   String? validateEmail(String email) {
     if (email.isEmpty) {
       return ManagerStrings.invalidEmptyEmail;
