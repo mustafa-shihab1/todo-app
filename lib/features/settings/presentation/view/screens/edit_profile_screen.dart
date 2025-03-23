@@ -7,7 +7,6 @@ import '../../../../../core/resources/manager_assets.dart';
 import '../../../../../core/resources/manager_colors.dart';
 import '../../../../../core/resources/manager_sizes.dart';
 import '../../../../../core/resources/manager_strings.dart';
-import '../../../../../core/validator/validator.dart';
 import '../../../../../core/widgets/custom_text_field.dart';
 import '../../../../../core/widgets/main_button.dart';
 import '../../../../main/presentation/view/custom_appbar.dart';
@@ -15,7 +14,7 @@ import '../../controller/settings_controller.dart';
 
 class EditProfileScreen extends StatelessWidget {
   // final FieldValidator _validator = FieldValidator();
-  EditProfileScreen({super.key});
+  const EditProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

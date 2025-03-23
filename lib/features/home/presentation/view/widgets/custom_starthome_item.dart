@@ -17,6 +17,9 @@ class CustomStartHomeItem extends StatelessWidget {
     return Center(
       child: Column(
         children: [
+          SizedBox(
+            height: ManagerHeight.h30,
+          ),
           Image.asset(
             ManagerAssets.homeStartImg,
           ),

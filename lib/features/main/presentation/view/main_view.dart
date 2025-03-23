@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../core/resources/manager_sizes.dart';
 import '../../../../core/resources/manager_colors.dart';
+import '../../../../routes/routes.dart';
 import '../../../home/presentation/view/widgets/gnav_bar.dart';
 import '../controller/main_controller.dart';
 import 'custom_appbar.dart';
@@ -16,15 +17,18 @@ class MainView extends StatelessWidget {
         backgroundColor: ManagerColors.backgroundColor,
         appBar: controller.currentIndex != 0
             ? customMainAppBar(title: controller.title[controller.currentIndex])
-            : customHomeAppBar(),
+            : customHomeAppBar(isHomePage: true),
         body: IndexedStack(
           index: controller.currentIndex,
           children: controller.screens,
         ),
         floatingActionButton: controller.currentIndex != 0
             ? Container()
-            : GestureDetector(
-                onTap: () {},
+            : InkWell(
+                borderRadius: BorderRadius.circular(25),
+                onTap: () {
+                  Get.toNamed(Routes.addTaskView);
+                },
                 child: Container(
                     clipBehavior: Clip.antiAlias,
                     height: ManagerHeight.h60,

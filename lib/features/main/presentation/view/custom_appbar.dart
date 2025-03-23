@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../core/resources/manager_fonts.dart';
 import '../../../../core/resources/manager_styles.dart';
 
@@ -21,14 +22,22 @@ AppBar customMainAppBar({
       centerTitle: true,
     );
 
-PreferredSize customHomeAppBar() {
+PreferredSize customHomeAppBar({
+  bool isHomePage = true,
+}) {
   return PreferredSize(
       preferredSize: const Size.fromHeight(56.0),
       child: AppBar(
         backgroundColor: ManagerColors.backgroundColor,
         elevation: Constants.appBarElevation,
-        leading: IconButton(
-            onPressed: () {}, icon: const Icon(Icons.nightlight_outlined)),
+        leading: isHomePage
+            ? IconButton(
+                onPressed: () {}, icon: const Icon(Icons.nightlight_outlined))
+            : IconButton(
+                onPressed: () {
+                  Get.back();
+                },
+                icon: const Icon(Icons.arrow_back_ios_new_rounded)),
         actions: [
           Container(
               margin: ManagerSetEdgeInsets.setSymmetric(
