@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import '../config/dependency_injection.dart';
 
 import 'config/constants.dart';
 import 'routes/routes.dart';
 
 void main() {
+  initModule();
   runApp(const MyApp());
 }
 
