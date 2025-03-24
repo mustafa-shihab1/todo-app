@@ -7,8 +7,10 @@ import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/resources/manager_styles.dart';
 
 class CustomSearchBox extends StatelessWidget {
+  final searchController;
   const CustomSearchBox({
     super.key,
+    required this.searchController,
   });
 
   @override
@@ -21,6 +23,7 @@ class CustomSearchBox extends StatelessWidget {
             color: ManagerColors.softGreyColor,
             borderRadius: BorderRadius.circular(10)),
         child: TextField(
+          controller: searchController,
           keyboardType: TextInputType.text,
           decoration: InputDecoration(
               focusedBorder: OutlineInputBorder(

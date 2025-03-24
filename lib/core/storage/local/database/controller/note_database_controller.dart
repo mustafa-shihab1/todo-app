@@ -23,6 +23,7 @@ class NoteDatabaseController extends DatabaseOperations<Note> {
   Future<List<Note>> read() async {
     List<Map<String, Object?>> data =
         await database!.query(Constants.notesTableName);
+
     // List<Note> notes = [];
     // for (Map<String, Object?> note in data) {
     //   notes.add(Note.fromMap(note));
@@ -51,10 +52,8 @@ class NoteDatabaseController extends DatabaseOperations<Note> {
   Future<List<Note>?> searchByTitle(String title) async {
     List<Map<String, Object?>> data = await database!.query(
         Constants.notesTableName,
-        where: '${Constants.notesTitleColumnName} = ?',
-        whereArgs: [title]);
-    return data.isNotEmpty
-        ? data.map((row) => Note.fromMap(row)).toList()
-        : null;
+        where: '${Constants.notesTitleColumnName} LIKE ?',
+        whereArgs: ['%$title%']);
+    return data.map((row) => Note.fromMap(row)).toList();
   }
 }
