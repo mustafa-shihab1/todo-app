@@ -5,8 +5,8 @@ import '../../../../core/resources/manager_fonts.dart';
 import '../../../../core/resources/manager_sizes.dart';
 import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/resources/manager_styles.dart';
-import '../../../home/presentation/view/widgets/task_card_item.dart';
 import '../controller/search_controller.dart';
+import '../widgets/search_item.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});
@@ -32,9 +32,11 @@ class SearchView extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10)),
               child: TextField(
                 onChanged: (value) {
-                  if (value.isNotEmpty) {
+                  if (value.isEmpty) {
+                    controller.searchList.clear();
+                    controller.update();
+                  } else {
                     controller.search(value);
-                    
                   }
                 },
                 controller: controller.searchController,
@@ -64,16 +66,16 @@ class SearchView extends StatelessWidget {
           ),
           Visibility(
             replacement: const Text('No Tasks Found!'),
-            visible: controller.searchList!.isNotEmpty,
+            visible: controller.searchList.isNotEmpty,
             child: Expanded(
               child: ListView.separated(
                   scrollDirection: Axis.vertical,
-                  itemBuilder: (context, index) => TaskCardItem(
-                        noteIndex: index,
+                  itemBuilder: (context, index) => SearchItem(
+                        note: controller.searchList[index],
                       ),
                   separatorBuilder: (context, index) =>
                       SizedBox(height: ManagerHeight.h20),
-                  itemCount: controller.searchList?.length ?? 0),
+                  itemCount: controller.searchList.length),
             ),
           ),
         ],
