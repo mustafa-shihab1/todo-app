@@ -7,7 +7,6 @@ import '../features/home/presentation/controller/home_controller.dart';
 import '../features/main/presentation/controller/main_controller.dart';
 import '../features/settings/presentation/controller/settings_controller.dart';
 import '../features/splash/presentation/controller/splash_controller.dart';
-import '../features/tasks/presentation/controller/task_controller.dart';
 
 final instance = GetIt.instance;
 
@@ -28,7 +27,6 @@ initMain() {
   disposeSplash();
   Get.put<HomeController>(HomeController());
   Get.put<SettingsController>(SettingsController());
-  Get.put<TaskController>(TaskController());
   Get.put<SearchsController>(SearchsController());
   Get.put<MainController>(MainController());
 }
