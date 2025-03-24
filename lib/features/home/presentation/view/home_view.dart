@@ -14,7 +14,9 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<HomeController>(builder: (controller) {
+    return GetBuilder<HomeController>(initState: (_) async {
+      await Get.find<HomeController>().read();
+    }, builder: (controller) {
       return Padding(
         padding: ManagerSetEdgeInsets.setSymmetric(
             vertical: ManagerHeight.h2, horizontal: ManagerWidth.w14),
@@ -41,7 +43,7 @@ class HomeView extends StatelessWidget {
                 child: ListView.separated(
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) => TaskCardItem(
-                      noteIndex: index,
+                          noteIndex: index,
                         ),
                     separatorBuilder: (context, index) =>
                         SizedBox(height: ManagerHeight.h20),

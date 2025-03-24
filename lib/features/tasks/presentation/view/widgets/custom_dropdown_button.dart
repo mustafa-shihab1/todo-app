@@ -4,7 +4,7 @@ import '../../../../../core/resources/manager_colors.dart';
 import '../../../../../core/resources/manager_fonts.dart';
 import '../../../../../core/resources/manager_sizes.dart';
 import '../../../../../core/resources/manager_styles.dart';
-import '../../controller/task_controller.dart';
+import '../../../../home/presentation/controller/home_controller.dart';
 
 class CustomDropdownButton extends StatelessWidget {
   const CustomDropdownButton({
@@ -12,7 +12,7 @@ class CustomDropdownButton extends StatelessWidget {
     required this.noteIndex,
     required this.controller,
   });
-  final TaskController controller;
+  final HomeController controller;
   final int noteIndex;
 
   @override

@@ -30,7 +30,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const AddTaskView());
       case Routes.taskDetailsView:
         final int taskIndex = settings.arguments as int;
-        return MaterialPageRoute(builder: (_) => TaskDetailsView(taskIndex: taskIndex,));
+        return MaterialPageRoute(
+            builder: (_) => TaskDetailsView(
+                  taskIndex: taskIndex,
+                ));
       default:
         return unDefinedRoute();
     }

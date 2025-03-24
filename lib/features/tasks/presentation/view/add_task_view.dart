@@ -8,8 +8,8 @@ import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/resources/manager_styles.dart';
 import '../../../../core/widgets/custom_text_field.dart';
 import '../../../../core/widgets/main_button.dart';
+import '../../../home/presentation/controller/home_controller.dart';
 import '../../../main/presentation/view/custom_appbar.dart';
-import '../controller/task_controller.dart';
 
 class AddTaskView extends StatelessWidget {
   const AddTaskView({super.key});
@@ -24,12 +24,9 @@ class AddTaskView extends StatelessWidget {
         padding:
             ManagerSetEdgeInsets.setSymmetric(horizontal: ManagerWidth.w16),
         child: SingleChildScrollView(
-          child: GetBuilder<TaskController>(
-              initState: (_) {
-                Get.find<TaskController>().clearControllers();
-              },
-              builder: (controller) {
-
+          child: GetBuilder<HomeController>(initState: (_) {
+            Get.find<HomeController>().clearControllers();
+          }, builder: (controller) {
             return Form(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

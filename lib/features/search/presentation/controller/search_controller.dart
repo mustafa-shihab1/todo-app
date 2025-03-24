@@ -5,7 +5,7 @@ import '../../../../core/storage/local/database/controller/note_database_control
 import '../../../../core/storage/local/database/model/note.dart';
 
 class SearchsController extends GetxController {
-  List<Note>? searchList = [];
+  List<Note> searchList = [];
   late TextEditingController searchController;
   final NoteDatabaseController _noteDatabaseController =
       NoteDatabaseController();
@@ -23,7 +23,7 @@ class SearchsController extends GetxController {
   }
 
   Future<List<Note>?> search(String title) async {
-    searchList = await _noteDatabaseController.searchByTitle(title);
+    searchList = await _noteDatabaseController.searchByTitle(title) ?? [];
     update();
     return searchList;
   }

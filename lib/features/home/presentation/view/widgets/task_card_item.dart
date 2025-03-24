@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:todo_app/features/tasks/presentation/view/task_details_view.dart';
 import 'package:todo_app/routes/routes.dart';
 
 import '../../../../../core/resources/manager_colors.dart';
@@ -18,7 +17,6 @@ class TaskCardItem extends StatelessWidget {
     return GetBuilder<HomeController>(builder: (controller) {
       return GestureDetector(
         onTap: () => Get.toNamed(Routes.taskDetailsView, arguments: noteIndex),
-
         child: Container(
           padding: EdgeInsets.symmetric(
             horizontal: ManagerWidth.w16,
