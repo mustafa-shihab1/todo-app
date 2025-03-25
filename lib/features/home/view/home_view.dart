@@ -50,7 +50,6 @@ class HomeView extends StatelessWidget {
                     itemCount: controller.notes.length),
               ),
             ),
-            //const CustomStartHomeItem(),
           ],
         ),
       );

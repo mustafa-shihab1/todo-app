@@ -6,7 +6,7 @@ import '../../../../core/resources/manager_sizes.dart';
 import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/resources/manager_styles.dart';
 import '../controller/search_controller.dart';
-import '../widgets/search_item.dart';
+import '../widgets/task_card.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});
@@ -70,7 +70,8 @@ class SearchView extends StatelessWidget {
             child: Expanded(
               child: ListView.separated(
                   scrollDirection: Axis.vertical,
-                  itemBuilder: (context, index) => SearchItem(
+                  itemBuilder: (context, index) => TaskCard(
+                        isCompleted: false,
                         note: controller.searchList[index],
                       ),
                   separatorBuilder: (context, index) =>

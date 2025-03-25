@@ -9,6 +9,7 @@ class HomeController extends GetxController with CustomSnackBar {
   DateTime currentDate = DateTime.now();
   DateTime selectedDate = DateTime.now();
   List<Note> notes = [];
+  List<Note> completedNotes = [];
 
   final NoteDatabaseController _noteDatabaseController =
       NoteDatabaseController();
@@ -178,5 +179,12 @@ class HomeController extends GetxController with CustomSnackBar {
     } else {
       print('Updating Failed!!');
     }
+  }
+
+  Future<void> completed(Note note) async {
+    completedNotes.add(note);
+    // await _noteDatabaseController.delete(note.id!);
+    read();
+    update();
   }
 }

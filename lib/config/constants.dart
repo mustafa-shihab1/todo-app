@@ -12,4 +12,5 @@ class Constants {
   static const String notesDateColumnName = 'date';
   static const String notesTimeColumnName = 'time';
   static const String notesRepeatColumnName = 'repeat';
+  static const String notesIsCompletedColumnName = 'isCompleted';
 }

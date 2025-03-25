@@ -9,18 +9,21 @@ import '../../../../../core/resources/manager_styles.dart';
 import '../../../../core/storage/local/database/model/note.dart';
 import '../../../home/presentation/controller/home_controller.dart';
 
-class SearchItem extends StatelessWidget {
+class TaskCard extends StatelessWidget {
   Note note;
-  SearchItem({required this.note, super.key});
+  bool isCompleted;
+  TaskCard({required this.note, required this.isCompleted, super.key});
 
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(builder: (controller) {
       return GestureDetector(
         onTap: () {
-          Get.toNamed(Routes.taskDetailsView,
-              arguments:
-                  controller.notes.indexWhere((item) => item.id == note.id));
+          if (!isCompleted) {
+            Get.toNamed(Routes.taskDetailsView,
+                arguments:
+                    controller.notes.indexWhere((item) => item.id == note.id));
+          }
         },
         child: Container(
           padding: EdgeInsets.symmetric(
