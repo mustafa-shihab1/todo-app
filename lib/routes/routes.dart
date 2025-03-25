@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import '../config/dependency_injection.dart';
 import '../core/resources/manager_strings.dart';
-import '../features/main/presentation/view/main_view.dart';
-import '../features/settings/presentation/view/screens/edit_profile_screen.dart';
-import '../features/splash/presentation/view/splash_view.dart';
-import '../features/tasks/presentation/view/add_task_view.dart';
-import '../features/tasks/presentation/view/task_details_view.dart';
+import '../features/main/view/main_view.dart';
+import '../features/settings/view/screens/edit_profile_screen.dart';
+import '../features/splash/view/splash_view.dart';
+import '../features/tasks/view/add_task_view.dart';
+import '../features/tasks/view/task_details_view.dart';
 
 class Routes {
   static const String splashView = "/splash_view";

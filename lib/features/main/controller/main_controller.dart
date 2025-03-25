@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../core/resources/manager_strings.dart';
-import '../../../home/presentation/view/home_view.dart';
+import '../../home/view/home_view.dart';
 import '../view/screens/completed_view.dart';
-import '../../../search/presentation/view/search_view.dart';
-import '../../../settings/presentation/view/settings_view.dart';
+import '../../search/view/search_view.dart';
+import '../../settings/view/settings_view.dart';
 
 class MainController extends GetxController {
   int currentIndex = 0;

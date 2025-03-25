@@ -6,7 +6,7 @@ import '../../../../../core/resources/manager_fonts.dart';
 import '../../../../../core/resources/manager_sizes.dart';
 import '../../../../../core/resources/manager_strings.dart';
 import '../../../../../core/resources/manager_styles.dart';
-import '../../../../main/presentation/controller/main_controller.dart';
+import '../../../main/controller/main_controller.dart';
 
 class GNavBar extends StatelessWidget {
   MainController controller;

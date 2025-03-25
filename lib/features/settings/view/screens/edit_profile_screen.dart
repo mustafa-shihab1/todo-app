@@ -9,7 +9,7 @@ import '../../../../../core/resources/manager_sizes.dart';
 import '../../../../../core/resources/manager_strings.dart';
 import '../../../../../core/widgets/custom_text_field.dart';
 import '../../../../../core/widgets/main_button.dart';
-import '../../../../main/presentation/view/custom_appbar.dart';
+import '../../../main/view/custom_appbar.dart';
 import '../../controller/settings_controller.dart';
 
 class EditProfileScreen extends StatelessWidget {

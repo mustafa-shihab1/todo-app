@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 
 import '../../../../../core/resources/manager_colors.dart';
 import '../../../../../core/resources/manager_sizes.dart';
-import '../../../../home/presentation/controller/home_controller.dart';
-import '../../../../search/presentation/widgets/task_card.dart';
+import '../../../home/controller/home_controller.dart';
+import '../../../search/widgets/task_card.dart';
 
 class CompletedView extends StatelessWidget {
   const CompletedView({super.key});

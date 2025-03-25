@@ -7,7 +7,7 @@ import '../../../../../core/resources/manager_fonts.dart';
 import '../../../../../core/resources/manager_sizes.dart';
 import '../../../../../core/resources/manager_styles.dart';
 import '../../../../core/storage/local/database/model/note.dart';
-import '../../../home/presentation/controller/home_controller.dart';
+import '../../home/controller/home_controller.dart';
 
 class TaskCard extends StatelessWidget {
   Note note;

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
-import '../features/search/presentation/controller/search_controller.dart';
+import '../features/search/controller/search_controller.dart';
 import '../core/storage/local/database/provider/database_provider.dart';
-import '../features/home/presentation/controller/home_controller.dart';
-import '../features/main/presentation/controller/main_controller.dart';
-import '../features/settings/presentation/controller/settings_controller.dart';
-import '../features/splash/presentation/controller/splash_controller.dart';
+import '../features/home/controller/home_controller.dart';
+import '../features/main/controller/main_controller.dart';
+import '../features/settings/controller/settings_controller.dart';
+import '../features/splash/controller/splash_controller.dart';
 
 final instance = GetIt.instance;
 

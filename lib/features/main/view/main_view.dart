@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../../../../core/resources/manager_sizes.dart';
 import '../../../../core/resources/manager_colors.dart';
 import '../../../../routes/routes.dart';
-import '../../../home/presentation/view/widgets/gnav_bar.dart';
+import '../../home/view/widgets/gnav_bar.dart';
 import '../controller/main_controller.dart';
 import 'custom_appbar.dart';
 

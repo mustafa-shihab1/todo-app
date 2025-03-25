@@ -8,8 +8,8 @@ import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/resources/manager_styles.dart';
 import '../../../../core/widgets/custom_text_field.dart';
 import '../../../../core/widgets/main_button.dart';
-import '../../../home/presentation/controller/home_controller.dart';
-import '../../../main/presentation/view/custom_appbar.dart';
+import '../../home/controller/home_controller.dart';
+import '../../main/view/custom_appbar.dart';
 
 class AddTaskView extends StatelessWidget {
   const AddTaskView({super.key});
