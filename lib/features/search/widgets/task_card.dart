@@ -11,19 +11,16 @@ import '../../home/controller/home_controller.dart';
 
 class TaskCard extends StatelessWidget {
   Note note;
-  bool isCompleted;
-  TaskCard({required this.note, required this.isCompleted, super.key});
+  TaskCard({required this.note, super.key});
 
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(builder: (controller) {
       return GestureDetector(
         onTap: () {
-          if (!isCompleted) {
-            Get.toNamed(Routes.taskDetailsView,
-                arguments:
-                    controller.notes.indexWhere((item) => item.id == note.id));
-          }
+          Get.toNamed(Routes.taskDetailsView,
+              arguments:
+                  controller.notes.indexWhere((item) => item.id == note.id));
         },
         child: Container(
           padding: EdgeInsets.symmetric(

@@ -71,7 +71,6 @@ class SearchView extends StatelessWidget {
               child: ListView.separated(
                   scrollDirection: Axis.vertical,
                   itemBuilder: (context, index) => TaskCard(
-                        isCompleted: false,
                         note: controller.searchList[index],
                       ),
                   separatorBuilder: (context, index) =>

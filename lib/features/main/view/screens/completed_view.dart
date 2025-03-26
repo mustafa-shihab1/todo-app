@@ -22,7 +22,6 @@ class CompletedView extends StatelessWidget {
             child: ListView.separated(
                 scrollDirection: Axis.vertical,
                 itemBuilder: (context, index) => TaskCard(
-                      isCompleted: true,
                       note: controller.completedNotes[index],
                     ),
                 separatorBuilder: (context, index) =>
