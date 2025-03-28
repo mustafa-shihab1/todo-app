@@ -64,6 +64,7 @@ class HomeController extends GetxController with CustomSnackBar {
 
   void changeDay(DateTime date) {
     selectedDate = date;
+    read();
     update();
   }
 
@@ -92,7 +93,11 @@ class HomeController extends GetxController with CustomSnackBar {
 
   Future<void> read() async {
     notes.clear();
-    notes = await _noteDatabaseController.read();
+    List<Note> allNotes = await _noteDatabaseController.read();
+    notes = allNotes
+        .where((note) =>
+            note.date == DateFormat('MMMM dd, y').format(selectedDate))
+        .toList();
     update();
   }
 
@@ -140,6 +145,7 @@ class HomeController extends GetxController with CustomSnackBar {
     bool isCreated = await create(note: note);
     if (isCreated) {
       print('New Note Created Successfully');
+      read();
       Get.back();
       update();
     } else {
