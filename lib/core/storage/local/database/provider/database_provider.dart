@@ -34,13 +34,14 @@ class DatabaseProvider {
                 '${Constants.notesDescColumnName} TEXT,'
                 '${Constants.notesDateColumnName} TEXT,'
                 '${Constants.notesTimeColumnName} TEXT,'
-                '${Constants.notesRepeatColumnName} TEXT)')
+                '${Constants.notesRepeatColumnName} TEXT,'
+                '${Constants.notesIsCompletedColumnName} INTEGER DEFAULT 0)')
             .then(
               (value) => print('Table created'),
             );
       },
       onOpen: (db) {},
-      onUpgrade: (db, oldVersion, newVersion) {},
+      onUpgrade: (db, oldVersion, newVersion) async {},
       onDowngrade: (db, oldVersion, newVersion) {},
     );
   }
