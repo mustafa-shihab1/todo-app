@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/resources/manager_colors.dart';
-import '../../../../../core/resources/manager_fonts.dart';
-import '../../../../../core/resources/manager_sizes.dart';
-import '../../../../../core/resources/manager_styles.dart';
-import '../../../home/controller/home_controller.dart';
+import '../../../../core/resources/manager_colors.dart';
+import '../../../../core/resources/manager_fonts.dart';
+import '../../../../core/resources/manager_sizes.dart';
+import '../../../../core/resources/manager_styles.dart';
+import '../../home/controller/home_controller.dart';
 
 class CustomDropdownButton extends StatelessWidget {
   const CustomDropdownButton({

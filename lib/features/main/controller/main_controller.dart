@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../core/resources/manager_strings.dart';
 import '../../home/view/home_view.dart';
-import '../view/screens/completed_view.dart';
+import '../../tasks/view/completed_view.dart';
 import '../../search/view/search_view.dart';
 import '../../settings/view/settings_view.dart';
 
