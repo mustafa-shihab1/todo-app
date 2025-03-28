@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import '../../../../core/storage/local/database/controller/note_database_controller.dart';
 import '../../../../core/widgets/custom_snackbar.dart';
 import '../../../../core/storage/local/database/model/note.dart';
+import '../../../config/constants.dart';
 
 class HomeController extends GetxController with CustomSnackBar {
   DateTime currentDate = DateTime.now();
@@ -29,6 +30,7 @@ class HomeController extends GetxController with CustomSnackBar {
     if (await _noteDatabaseController.delete(id!)) {
       showSnackBar(context: context, message: 'Note Deleted Successfully');
       read();
+      readCompletedNotes();
     } else {
       showSnackBar(context: context, message: 'Deleted Faild!!', error: true);
     }
@@ -181,10 +183,19 @@ class HomeController extends GetxController with CustomSnackBar {
     }
   }
 
-  Future<void> completed(Note note) async {
-    completedNotes.add(note);
-    // await _noteDatabaseController.delete(note.id!);
-    read();
+  Future<void> readCompletedNotes() async {
+    completedNotes.clear();
+    completedNotes = await _noteDatabaseController.readCompleted();
     update();
+  }
+
+  Future<void> completeNote(Note note) async {
+    bool isUpdated = await _noteDatabaseController.markAsCompleted(note);
+    if (isUpdated) {
+      note.isCompleted = 1;
+      readCompletedNotes();
+      notes.removeWhere((element) => element.id == note.id);
+      update();
+    }
   }
 }
