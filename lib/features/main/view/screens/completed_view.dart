@@ -11,7 +11,9 @@ class CompletedView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<HomeController>(builder: (controller) {
+    return GetBuilder<HomeController>(initState: (_) async {
+      await Get.find<HomeController>().readCompletedNotes();
+    }, builder: (controller) {
       return Column(
         children: [
           const Divider(

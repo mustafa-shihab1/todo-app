@@ -82,6 +82,13 @@ class TaskCard extends StatelessWidget {
                   ],
                 ),
               ),
+              note.isCompleted == 1
+                  ? IconButton(
+                      onPressed: () async {
+                        await controller.delete(note.id, context);
+                      },
+                      icon: const Icon(Icons.delete_outline_rounded))
+                  : Container(),
             ],
           ),
         ),
