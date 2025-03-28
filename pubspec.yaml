@@ -46,6 +46,7 @@ dependencies:
   google_nav_bar: ^5.0.7
   scrollable_positioned_list: ^0.3.8
   easy_date_timeline: ^2.0.4
+  flutter_slidable: ^4.0.0
 
 dev_dependencies:
   flutter_test:
