@@ -34,17 +34,22 @@ class EditProfileScreen extends StatelessWidget {
             SizedBox(height: ManagerHeight.h24),
             Center(
               child: Container(
-                  clipBehavior: Clip.antiAlias,
-                  width: ManagerWidth.w120,
-                  decoration: const BoxDecoration(shape: BoxShape.circle),
-                  child: Image.asset(ManagerAssets.defaultUserImg)),
+                clipBehavior: Clip.antiAlias,
+                width: ManagerWidth.w120,
+                decoration: const BoxDecoration(shape: BoxShape.circle),
+                child: controller.image == null
+                    ? Image.asset(ManagerAssets.defaultUserImg)
+                    : Image.file(controller.image!),
+              ),
             ),
             SizedBox(height: ManagerHeight.h18),
             Padding(
               padding: ManagerSetEdgeInsets.setSymmetric(
                   horizontal: ManagerWidth.w100),
               child: MainButton(
-                onPressed: () {},
+                onPressed: () {
+                  controller.pickImageFromGallery();
+                },
                 btnTitle: ManagerStrings.changeImage,
                 btnSvgIcon: ManagerAssets.changeImgIcon,
                 iconColor: ManagerColors.black,
