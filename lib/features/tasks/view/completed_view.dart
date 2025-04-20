@@ -14,23 +14,27 @@ class CompletedView extends StatelessWidget {
     return GetBuilder<HomeController>(initState: (_) async {
       await Get.find<HomeController>().readCompletedNotes();
     }, builder: (controller) {
-      return Column(
-        children: [
-          const Divider(
-            color: ManagerColors.dividerColor,
-            thickness: 1,
-          ),
-          Expanded(
-            child: ListView.separated(
-                scrollDirection: Axis.vertical,
-                itemBuilder: (context, index) => TaskCard(
-                      note: controller.completedNotes[index],
-                    ),
-                separatorBuilder: (context, index) =>
-                    SizedBox(height: ManagerHeight.h20),
-                itemCount: controller.completedNotes.length),
-          )
-        ],
+      return Padding(
+        padding: EdgeInsets.symmetric(
+            vertical: ManagerHeight.h2, horizontal: ManagerWidth.w14),
+        child: Column(
+          children: [
+            const Divider(
+              color: ManagerColors.dividerColor,
+              thickness: 1,
+            ),
+            Expanded(
+              child: ListView.separated(
+                  scrollDirection: Axis.vertical,
+                  itemBuilder: (context, index) => TaskCard(
+                        note: controller.completedNotes[index],
+                      ),
+                  separatorBuilder: (context, index) =>
+                      SizedBox(height: ManagerHeight.h20),
+                  itemCount: controller.completedNotes.length),
+            )
+          ],
+        ),
       );
     });
   }
