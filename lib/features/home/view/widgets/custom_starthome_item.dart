@@ -22,6 +22,7 @@ class CustomStartHomeItem extends StatelessWidget {
           ),
           Image.asset(
             ManagerAssets.homeStartImg,
+            height: ManagerHeight.h270,
           ),
           SizedBox(
             height: ManagerHeight.h20,
