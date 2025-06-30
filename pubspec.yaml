@@ -48,6 +48,7 @@ dependencies:
   easy_date_timeline: ^2.0.4
   flutter_slidable: ^4.0.0
   image_picker: ^1.1.2
+  flutter_local_notifications: ^19.3.0
 
 dev_dependencies:
   flutter_test:
