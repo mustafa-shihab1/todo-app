@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
+import '../core/notification/notification_service.dart';
 import '../features/search/controller/search_controller.dart';
 import '../core/storage/local/database/provider/database_provider.dart';
 import '../features/home/controller/home_controller.dart';
@@ -13,6 +14,7 @@ final instance = GetIt.instance;
 initModule() async {
   WidgetsFlutterBinding.ensureInitialized();
   await DatabaseProvider().initDatabase();
+  NotificationService().initNotification();
 }
 
 initSplash() {

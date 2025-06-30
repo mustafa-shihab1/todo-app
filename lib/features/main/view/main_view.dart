@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import '../../../../core/resources/manager_sizes.dart';
 import '../../../../core/resources/manager_colors.dart';
 import '../../../../routes/routes.dart';
+import '../../../core/notification/notification_service.dart';
 import '../../home/view/widgets/gnav_bar.dart';
 import '../controller/main_controller.dart';
 import 'custom_appbar.dart';
@@ -27,7 +28,8 @@ class MainView extends StatelessWidget {
             : InkWell(
                 borderRadius: BorderRadius.circular(25),
                 onTap: () {
-                  Get.toNamed(Routes.addTaskView);
+                  NotificationService().showNotification(id: 0, title: "title", body: "body");
+                 Get.toNamed(Routes.addTaskView);
                 },
                 child: Container(
                     clipBehavior: Clip.antiAlias,
