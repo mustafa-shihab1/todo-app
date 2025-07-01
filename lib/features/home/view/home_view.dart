@@ -36,19 +36,16 @@ class HomeView extends StatelessWidget {
             SizedBox(
               height: ManagerHeight.h30,
             ),
-            Visibility(
-              replacement: const CustomStartHomeItem(),
-              visible: controller.notes.isNotEmpty,
-              child: Expanded(
-                child: ListView.separated(
-                    scrollDirection: Axis.vertical,
-                    itemBuilder: (context, index) => TaskCardItem(
-                          noteIndex: index,
-                        ),
-                    separatorBuilder: (context, index) =>
-                        SizedBox(height: ManagerHeight.h20),
-                    itemCount: controller.notes.length),
-              ),
+            controller.notes.isEmpty ? Container()
+            :Expanded(
+              child: ListView.separated(
+                  scrollDirection: Axis.vertical,
+                  itemBuilder: (context, index) => TaskCardItem(
+                        noteIndex: index,
+                      ),
+                  separatorBuilder: (context, index) =>
+                      SizedBox(height: ManagerHeight.h20),
+                  itemCount: controller.notes.length),
             ),
           ],
         ),
