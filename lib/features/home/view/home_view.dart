@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:todo_app/features/home/view/widgets/custom_starthome_item.dart';
 import 'package:todo_app/features/home/view/widgets/task_card_item.dart';
 import '../../../../../core/resources/manager_fonts.dart';
 import '../../../../../core/resources/manager_styles.dart';

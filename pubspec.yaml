@@ -39,13 +39,13 @@ dependencies:
   sqflite: ^2.3.2
   get: ^4.6.6
   get_it: ^7.6.7
-  intl: ^0.19.0
+  intl: 
   path: ^1.9.0
   path_provider: ^2.1.4
   flutter_svg: ^2.0.10+1
   google_nav_bar: ^5.0.7
   scrollable_positioned_list: ^0.3.8
-  easy_date_timeline: ^2.0.4
+  easy_date_timeline:
   flutter_slidable: ^4.0.0
   image_picker: ^1.1.2
   flutter_local_notifications: ^19.3.0

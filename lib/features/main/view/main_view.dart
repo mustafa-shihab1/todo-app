@@ -27,9 +27,15 @@ class MainView extends StatelessWidget {
             ? Container()
             : InkWell(
                 borderRadius: BorderRadius.circular(25),
-                onTap: () {
-                  NotificationService().showNotification(id: 0, title: "title", body: "body");
-                 Get.toNamed(Routes.addTaskView);
+                onTap: () async {
+                  // await NotificationService().scheduleNotification(
+                  //     id: 0,
+                  //     title: 'text',
+                  //     body: 'controller.descController!.text',
+                  //     dateTime: DateTime.now().add(const Duration(seconds: 10)),
+                  //     repeat: 'Once');
+
+                  Get.toNamed(Routes.addTaskView);
                 },
                 child: Container(
                     clipBehavior: Clip.antiAlias,

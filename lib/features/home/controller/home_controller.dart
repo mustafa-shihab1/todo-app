@@ -8,6 +8,7 @@ import '../../../../core/storage/local/database/model/note.dart';
 class HomeController extends GetxController with CustomSnackBar {
   DateTime currentDate = DateTime.now();
   DateTime selectedDate = DateTime.now();
+  DateTime scheduledDate = DateTime.now().add(const Duration(seconds: 10));
   List<Note> notes = [];
   List<Note> completedNotes = [];
   final NoteDatabaseController _noteDatabaseController =
@@ -76,6 +77,7 @@ class HomeController extends GetxController with CustomSnackBar {
         lastDate: DateTime.now().add(const Duration(days: 365)));
     if (selectedDate != null) {
       dateController?.text = DateFormat('MMMM dd, y').format(selectedDate);
+      print(selectedDate);
       update();
     }
   }
@@ -87,6 +89,7 @@ class HomeController extends GetxController with CustomSnackBar {
     );
     if (selectedTime != null) {
       timeController!.text = selectedTime.format(context).toString();
+      print(selectedTime);
       update();
     }
   }

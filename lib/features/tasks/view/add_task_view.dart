@@ -8,6 +8,7 @@ import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/resources/manager_styles.dart';
 import '../../../../core/widgets/custom_text_field.dart';
 import '../../../../core/widgets/main_button.dart';
+import '../../../core/notification/notification_service.dart';
 import '../../home/controller/home_controller.dart';
 import '../../main/view/custom_appbar.dart';
 
@@ -191,8 +192,20 @@ class AddTaskView extends StatelessWidget {
                     height: ManagerHeight.h60,
                   ),
                   MainButton(
-                      onPressed: () {
+                      onPressed: () async {
                         controller.performCreation();
+                        // التاريخين اللي تحت في الصورة
+                        debugPrint("${controller.scheduledDate}");
+                        debugPrint("${DateTime.now()}");
+
+                        await NotificationService().scheduleNotification(
+                          id: 0,
+                          title: controller.titleController!.text,
+                          body: controller.descController!.text,
+                          // المشكلة هلقيت كيف بدي اجيب قمية الزفت هادا لما بكريت تاسك جديدة
+                          dateTime: controller.scheduledDate,
+                          repeat: controller.selectedOption!,
+                        );
                       },
                       btnTitle: ManagerStrings.createTask,
                       btnColor: ManagerColors.primaryColor,
